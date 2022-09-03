@@ -7,20 +7,29 @@ export default new Router({
   mode: "history",
   routes: [
     {
-      path: "/",
-      alias: "/tutorials",
-      name: "tutorials",
-      component: () => import("./components/TutorialsList")
+      path: "/lifecycle",
+      name: "lifecycle",
+      component: () => import("./components/LifeCycleHooks")
     },
     {
-      path: "/tutorials/:id",
-      name: "tutorial-details",
-      component: () => import("./components/Tutorial")
+      path: "/parent",
+      name: "parent",
+      component: () => import("./components/Parent")
     },
     {
-      path: "/add",
-      name: "add",
-      component: () => import("./components/AddTutorial")
+      path: "/watcher",
+      name: "watcher",
+      component: () => import("./components/Watcher")
+    },
+    {
+      path: "/next-tick",
+      name: "nextTick",
+      component: () => import("./components/NextTick")
+    },
+    {
+      path: "/promises",
+      name: "promises",
+      component: () => import("./components/Promises")
     }
   ]
 });
